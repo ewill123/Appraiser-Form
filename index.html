@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div class="wrapper p-5">
+        <h2 class="text-center mb-4" id="form-title">Login Form</h2>
+
+        <!-- Login Form -->
+        <div class="form-container" id="login-form">
+          <div class="form-group">
+            <label for="login-email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="login-email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="login-password"
+              required
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-light btn-block rounded-pill"
+            id="login-btn"
+          >
+            Login
+          </button>
+          <div class="text-center mt-4">
+            <p>
+              Don't have an account?
+              <a href="#" id="show-signup" class="text-light">Register</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-container" id="signup-form" style="display: none">
+          <div class="form-group">
+            <label for="signup-email">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="signup-email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="signup-password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="signup-password"
+              required
+            />
+          </div>
+          <button
+            type="button"
+            class="btn btn-light btn-block rounded-pill"
+            id="signup-btn"
+          >
+            Sign Up
+          </button>
+          <div class="text-center mt-4">
+            <p>
+              Already have an account?
+              <a href="#" id="show-login" class="text-light">Login</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Firebase Compatibility Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-auth-compat.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

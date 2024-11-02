@@ -1,0 +1,256 @@
+/* General Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background: url("background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Change to a darker color for better contrast */
+}
+
+/* Logo Styling */
+.app-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+/* Layout Partitioning */
+.container {
+  width: 100%;
+  margin: 40px auto;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly more opaque for better readability */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  color: #444;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #7e076e; /* Adjusted color for better visibility */
+  font-style: italic;
+  margin-top: 20px; /* Added margin for better spacing */
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #222;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px; /* Increased padding for better spacing */
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 2px 4px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #76c7ff; /* Highlight border on hover */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #76c7ff;
+  box-shadow: 0 0 8px rgba(118, 199, 255, 0.8);
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background-color: #76c7ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 6px 16px rgba(118, 199, 255, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #4ea6f8;
+  box-shadow: 0 8px 20px rgba(78, 166, 248, 0.7);
+}
+
+/* Floating button styles */
+.floating-btn {
+  width: 50px;
+  height: 50px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  box-shadow: 0 4px 20px rgba(255, 105, 180, 0.6);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.floating-btn:hover {
+  box-shadow: 0 6px 30px rgba(255, 105, 180, 0.8);
+  transform: scale(1.1);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer-content p {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.footer p:hover {
+  color: #000249;
+  transition: color 0.3s ease;
+}
+
+/* Hover Popup Effect */
+.form-section {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Collapsible Section Styling */
+.accordion-button {
+  border-radius: 10px;
+}
+
+.accordion-body {
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Button Styling */
+.btn-primary {
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0062cc;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Additional Section Partitioning */
+.rating-section,
+.feedback-section {
+  margin-top: 40px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.rating-section:hover,
+.feedback-section:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Image Styling */
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #7e076ec8;
+  font-style: italic;
+}
+
+.floating-btn {
+  width: 60px;
+  height: 60px;
+  background-color: #76c7ff; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px; /* Distance from the bottom */
+  right: 30px; /* Distance from the right */
+  box-shadow: 0 4px 10px rgba(118, 199, 255, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
+  font-size: 16px;
+}
+
+.floating-btn:hover {
+  background-color: #4ea6f8;
+  box-shadow: 0 6px 20px rgba(78, 166, 248, 0.7);
+  transform: scale(1.1);
+}
