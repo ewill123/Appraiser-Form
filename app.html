@@ -150,227 +150,138 @@
                   <div class="accordion-body">
                     <div class="approvals-section">
 
-                      <!-- Attendance -->
-                      <div class="mb-3">
-                        <label for="attendance" class="form-label">Attendance:</label>
-                        <select id="attendance" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveAttendance" name="attendanceApproval" class="form-check-input" value="approve" required />
-                          <label for="approveAttendance" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveAttendance" name="attendanceApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveAttendance" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Quality of Work -->
-                      <div class="mb-3">
-                        <label for="qualityOfWork" class="form-label">Quality of Work:</label>
-                        <select id="qualityOfWork" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveQualityOfWork" name="qualityOfWorkApproval" class="form-check-input" value="approve" required />
-                          <label for="approveQualityOfWork" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveQualityOfWork" name="qualityOfWorkApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveQualityOfWork" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Quantity of Work -->
-                      <div class="mb-3">
-                        <label for="quantityOfWork" class="form-label">Quantity of Work:</label>
-                        <select id="quantityOfWork" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveQuantityOfWork" name="quantityOfWorkApproval" class="form-check-input" value="approve" required />
-                          <label for="approveQuantityOfWork" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveQuantityOfWork" name="quantityOfWorkApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveQuantityOfWork" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Analytical Ability -->
-                      <div class="mb-3">
-                        <label for="analyticalAbility" class="form-label">Analytical Ability:</label>
-                        <select id="analyticalAbility" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveAnalyticalAbility" name="analyticalAbilityApproval" class="form-check-input" value="approve" required />
-                          <label for="approveAnalyticalAbility" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveAnalyticalAbility" name="analyticalAbilityApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveAnalyticalAbility" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Motivation/Interest, Drive, and Determination -->
-                      <div class="mb-3">
-                        <label for="motivation" class="form-label">Motivation/Interest, Drive, and Determination:</label>
-                        <select id="motivation" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveMotivation" name="motivationApproval" class="form-check-input" value="approve" required />
-                          <label for="approveMotivation" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveMotivation" name="motivationApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveMotivation" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Dependability and Responsibility -->
-                      <div class="mb-3">
-                        <label for="dependability" class="form-label">Dependability and Responsibility:</label>
-                        <select id="dependability" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveDependability" name="dependabilityApproval" class="form-check-input" value="approve" required />
-                          <label for="approveDependability" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveDependability" name="dependabilityApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveDependability" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Orderliness / Good Habits -->
-                      <div class="mb-3">
-                        <label for="orderliness" class="form-label">Orderliness / Good Habits:</label>
-                        <select id="orderliness" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveOrderliness" name="orderlinessApproval" class="form-check-input" value="approve" required />
-                          <label for="approveOrderliness" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveOrderliness" name="orderlinessApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveOrderliness" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Interpersonal Relationships with Colleagues and Guests -->
-                      <div class="mb-3">
-                        <label for="interpersonalRelationships" class="form-label">Interpersonal Relationships with Colleagues and Guests:</label>
-                        <select id="interpersonalRelationships" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveInterpersonalRelationships" name="interpersonalRelationshipsApproval" class="form-check-input" value="approve" required />
-                          <label for="approveInterpersonalRelationships" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveInterpersonalRelationships" name="interpersonalRelationshipsApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveInterpersonalRelationships" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Ability to Lead and Manage Others -->
-                      <div class="mb-3">
-                        <label for="leadership" class="form-label">Ability to Lead and Manage Others:</label>
-                        <select id="leadership" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveLeadership" name="leadershipApproval" class="form-check-input" value="approve" required />
-                          <label for="approveLeadership" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveLeadership" name="leadershipApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveLeadership" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Adaptability to New Skills and Procedures -->
-                      <div class="mb-3">
-                        <label for="adaptability" class="form-label">Adaptability to New Skills and Procedures:</label>
-                        <select id="adaptability" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveAdaptability" name="adaptabilityApproval" class="form-check-input" value="approve" required />
-                          <label for="approveAdaptability" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveAdaptability" name="adaptabilityApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveAdaptability" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                      <!-- Ability to Monitor and Share -->
-                      <div class="mb-3">
-                        <label for="monitoring" class="form-label">Ability to Monitor and Share:</label>
-                        <select id="monitoring" class="form-select" required>
-                          <option value="excellent">Excellent</option>
-                          <option value="good">Good</option>
-                          <option value="satisfactory">Satisfactory</option>
-                          <option value="fair">Fair</option>
-                          <option value="poor">Poor</option>
-                        </select>
-                        <div class="form-check-inline">
-                          <input type="radio" id="approveMonitoring" name="monitoringApproval" class="form-check-input" value="approve" required />
-                          <label for="approveMonitoring" class="form-check-label">Approve</label>
-                        </div>
-                        <div class="form-check-inline">
-                          <input type="radio" id="disapproveMonitoring" name="monitoringApproval" class="form-check-input" value="disapprove" />
-                          <label for="disapproveMonitoring" class="form-check-label">Disapprove</label>
-                        </div>
-                      </div>
-                    
-                    </div>
+                     <!-- Attendance -->
+<div class="mb-3">
+  <label for="attendance" class="form-label">Attendance:</label>
+  <select id="attendance" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Quality of Work -->
+<div class="mb-3">
+  <label for="qualityOfWork" class="form-label">Quality of Work:</label>
+  <select id="qualityOfWork" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Quantity of Work -->
+<div class="mb-3">
+  <label for="quantityOfWork" class="form-label">Quantity of Work:</label>
+  <select id="quantityOfWork" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Analytical Ability -->
+<div class="mb-3">
+  <label for="analyticalAbility" class="form-label">Analytical Ability:</label>
+  <select id="analyticalAbility" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Motivation/Interest, Drive, and Determination -->
+<div class="mb-3">
+  <label for="motivation" class="form-label">Motivation/Interest, Drive, and Determination:</label>
+  <select id="motivation" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Dependability and Responsibility -->
+<div class="mb-3">
+  <label for="dependability" class="form-label">Dependability and Responsibility:</label>
+  <select id="dependability" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Orderliness / Good Habits -->
+<div class="mb-3">
+  <label for="orderliness" class="form-label">Orderliness / Good Habits:</label>
+  <select id="orderliness" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Interpersonal Relationships with Colleagues and Guests -->
+<div class="mb-3">
+  <label for="interpersonalRelationships" class="form-label">Interpersonal Relationships with Colleagues and Guests:</label>
+  <select id="interpersonalRelationships" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Ability to Lead and Manage Others -->
+<div class="mb-3">
+  <label for="leadership" class="form-label">Ability to Lead and Manage Others:</label>
+  <select id="leadership" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Adaptability to New Skills and Procedures -->
+<div class="mb-3">
+  <label for="adaptability" class="form-label">Adaptability to New Skills and Procedures:</label>
+  <select id="adaptability" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
+<!-- Ability to Monitor and Share -->
+<div class="mb-3">
+  <label for="monitoring" class="form-label">Ability to Monitor and Share:</label>
+  <select id="monitoring" class="form-select" required>
+    <option value="excellent">Excellent</option>
+    <option value="good">Good</option>
+    <option value="satisfactory">Satisfactory</option>
+    <option value="fair">Fair</option>
+    <option value="poor">Poor</option>
+  </select>
+</div>
+
                     
                   
                   <!-- Add any additional ratings here -->
@@ -381,6 +292,22 @@
         </div>
         <button class="floating-btn" id="toggleShowRatings"></button>
       </div>
+       <!-- Supervisor Statement Section -->
+<div class="form-section mb-3">
+  <h3>Supervisor Statement</h3>
+  <div class="mb-3">
+      <label for="supervisorComments" class="form-label">
+          Please discuss weaknesses, strengths, skills, attitude, and areas needing improvement:
+      </label>
+      <textarea
+          id="supervisorComments"
+          class="form-control"
+          rows="5"
+          required
+      ></textarea>
+  </div>
+</div>
+
         <!-- Employee Comments -->
         <div class="form-section mb-3">
           <h3>Employee Comments</h3>
@@ -400,8 +327,7 @@
         </div>
       </form>
     </div>
-
-    <!-- Bootstrap JS and Custom Scripts -->
+<!-- Bootstrap JS and Custom Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 <script type="module" src="app.js"></script>
