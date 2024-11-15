@@ -70,3 +70,28 @@ document.getElementById("show-login")?.addEventListener("click", () => {
     document.getElementById("login-form").style.display = "block";
     document.getElementById("form-title").textContent = "Login Form";
 });
+
+// JavaScript to toggle the password visibility
+document.getElementById("toggleLoginPassword").addEventListener("click", function () {
+    const passwordField = document.getElementById("login-password");
+    const icon = this;
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      icon.classList.replace("fa-eye", "fa-eye-slash"); // Change icon to eye-slash
+    } else {
+      passwordField.type = "password";
+      icon.classList.replace("fa-eye-slash", "fa-eye"); // Change icon back to eye
+    }
+  });
+
+  document.getElementById("toggleSignupPassword").addEventListener("click", function () {
+    const passwordField = document.getElementById("signup-password");
+    const icon = this;
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      icon.classList.replace("fa-eye", "fa-eye-slash"); // Change icon to eye-slash
+    } else {
+      passwordField.type = "password";
+      icon.classList.replace("fa-eye-slash", "fa-eye"); // Change icon back to eye
+    }
+  });
