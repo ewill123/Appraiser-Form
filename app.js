@@ -272,13 +272,6 @@ document
   });
   
 
-  // Function to generate a unique URL
-function generateUniqueUrl(supervisorId, uniqueId) {
-  const baseUrl = "https://your-app.com/employeeForm"; // Replace with your actual form URL
-  const uniqueUrl = `${baseUrl}?supervisorId=${supervisorId}&uniqueId=${uniqueId}`;
-  return uniqueUrl;
-}
-
 // Updated Form Submission
 document
   .getElementById("performanceForm")
@@ -314,4 +307,129 @@ function copyToClipboard(text) {
     () => alert("URL copied to clipboard!"),
     (err) => alert("Failed to copy URL: " + err)
   );
+}
+
+// Add Print Functionality
+document.getElementById("printForm").addEventListener("click", function () {
+  const employeeId = document.getElementById("employeeId").value;
+
+  if (employeeId) {
+    const printableContent = generatePrintableContent();
+    displayPrintableContent(printableContent);
+    window.print(); // Open the print dialog
+  } else {
+    alert("Please fetch the employee data first.");
+  }
+});
+
+function generatePrintableContent() {
+  const employeeName = document.getElementById("employeeName").value;
+  const supervisorName = document.getElementById("supervisorName").value;
+  const department = document.getElementById("department").value;
+  const position = document.getElementById("position").value;
+  const appraisalFrom = document.getElementById("appraisalFrom").value;
+  const appraisalTo = document.getElementById("appraisalTo").value;
+  const comments = document.getElementById("employeeComments").value;
+  const supervisorComments = document.getElementById("supervisorComments").value;
+  const profileImageUrl = document.getElementById("photoPreview").src;
+
+  // Performance Ratings
+  const ratings = [
+    "attendance",
+    "qualityOfWork",
+    "quantityOfWork",
+    "analyticalAbility",
+    "motivation",
+    "dependability",
+    "orderliness",
+    "interpersonalRelationships",
+    "leadership",
+    "adaptability",
+    "monitoring",
+  ];
+  const performanceRatings = ratings.map((rating) => {
+    return {
+      label: rating.replace(/([A-Z])/g, " $1").toUpperCase(),
+      value: document.getElementById(rating).value,
+    };
+  });
+
+  // Generate HTML for printable content
+  let printableHTML = `
+    <div style="font-family: Arial, sans-serif; font-size: 12px; margin: 0; padding: 0; width: 210mm; height: 297mm; box-sizing: border-box;">
+      <div style="text-align: center; margin-bottom: 10px;">
+        <h2 style="margin: 0; font-size: 16px;">Employee Performance Appraisal</h2>
+      </div>
+      <hr style="margin: 10px 0;" />
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="width: 70%;">
+          <p><strong>Employee Name:</strong> ${employeeName}</p>
+          <p><strong>Supervisor Name:</strong> ${supervisorName}</p>
+          <p><strong>Department:</strong> ${department}</p>
+          <p><strong>Position:</strong> ${position}</p>
+          <p><strong>Appraisal Period:</strong> ${appraisalFrom} - ${appraisalTo}</p>
+        </div>
+        <div style="width: 25%; text-align: center;">
+          <img src="${profileImageUrl}" alt="Profile Image" style="width: 80px; height: 80px; border-radius: 50%;" />
+        </div>
+      </div>
+      <hr style="margin: 10px 0;" />
+      <div>
+        <h3 style="font-size: 14px; margin-bottom: 5px;">Performance Ratings</h3>
+        <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+          <thead>
+            <tr style="background: #f4f4f4; border: 1px solid #ddd;">
+              <th style="padding: 5px; text-align: left; border: 1px solid #ddd;">Criteria</th>
+              <th style="padding: 5px; text-align: center; border: 1px solid #ddd;">Rating</th>
+            </tr>
+          </thead>
+          <tbody>
+  `;
+
+  performanceRatings.forEach((rating) => {
+    printableHTML += `
+      <tr>
+        <td style="padding: 5px; border: 1px solid #ddd;">${rating.label}</td>
+        <td style="padding: 5px; text-align: center; border: 1px solid #ddd;">${rating.value}</td>
+      </tr>
+    `;
+  });
+
+  printableHTML += `
+          </tbody>
+        </table>
+      </div>
+      <hr style="margin: 10px 0;" />
+      <div>
+        <h3 style="font-size: 14px; margin-bottom: 5px;">Comments</h3>
+        <p style="margin: 5px 0;"><strong>Employee Comments:</strong></p>
+        <p style="margin-left: 10px; font-size: 12px;">${comments}</p>
+        <p style="margin: 5px 0;"><strong>Supervisor Comments:</strong></p>
+        <p style="margin-left: 10px; font-size: 12px;">${supervisorComments}</p>
+      </div>
+    </div>
+  `;
+
+  return printableHTML;
+}
+
+// Display Printable Content
+function displayPrintableContent(content) {
+  const printWindow = window.open("", "_blank");
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>Printable Form</title>
+        <style>
+          body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+          table { width: 100%; border-collapse: collapse; }
+          th, td { border: 1px solid #ddd; padding: 5px; }
+          th { background: #f4f4f4; }
+        </style>
+      </head>
+      <body>${content}</body>
+    </html>
+  `);
+  printWindow.document.close();
+  printWindow.focus();
 }
